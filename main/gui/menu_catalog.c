@@ -32,6 +32,9 @@
 #if defined(CONFIG_HAS_SUBGHZ) || defined(CONFIG_HAS_SUBGHZ_REMOTE)
 #include "managers/views/subghz_view.h"
 #endif
+#if CONFIG_JAMMER_ENABLE
+#include "managers/views/jammer_view.h"
+#endif
 #if defined(CONFIG_HAS_LORA) && defined(CONFIG_WITH_SCREEN)
 #include "managers/views/lora_view.h"
 #endif
