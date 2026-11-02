@@ -1,6 +1,6 @@
 #pragma once
 
-#include "managers/views/view.h"
+#include "gui/menu_catalog.h"
 
 #ifdef __cplusplus
 extern "C" {
