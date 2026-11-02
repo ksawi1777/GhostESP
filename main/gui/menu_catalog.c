@@ -117,6 +117,9 @@ static const menu_catalog_item_t builtin_items[] = {
 #if defined(CONFIG_HAS_SUBGHZ) || defined(CONFIG_HAS_SUBGHZ_REMOTE)
     ITEM("subghz", "SubGHz", "subghz", subghz, subghz_view, 0, MENU_PLACE_MAIN),
 #endif
+#if CONFIG_JAMMER_ENABLE
+    ITEM("jammer", "Jammer", "subghz", subghz, jammer_view, 0, MENU_PLACE_MAIN),
+#endif
 #if defined(CONFIG_HAS_LORA) && defined(CONFIG_WITH_SCREEN)
     ITEM("lora", "LoRa", "lora", lora, lora_view, 0, MENU_PLACE_MAIN),
 #endif
