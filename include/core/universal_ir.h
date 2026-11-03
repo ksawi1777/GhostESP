@@ -12,7 +12,7 @@ typedef struct {
     uint32_t command;
 } universal_ir_signal_t;
 
-#define UNIVERSAL_IR_SIGNAL_COUNT 61
+#define UNIVERSAL_IR_SIGNAL_COUNT 75
 
 static const universal_ir_signal_t universal_ir_signals[UNIVERSAL_IR_SIGNAL_COUNT] = {
     {"POWER", "NEC", 0x00000004, 0x00000008},
@@ -76,6 +76,25 @@ static const universal_ir_signal_t universal_ir_signals[UNIVERSAL_IR_SIGNAL_COUN
     {"POWER", "Pioneer", 0x000000AA, 0x0000001C},
     {"POWER", "SIRC", 0x00000001, 0x0000002E},
     {"POWER", "Samsung32", 0x0000003E, 0x0000000C},
+    // IRBIS SmartBoard
+    {"IRBIS_Black", "NEC", 0x00000080, 0x00000020},
+    {"IRBIS_Freeze", "NEC", 0x00000080, 0x00000048},
+    {"IRBIS_Power", "NEC", 0x00000080, 0x00000018},
+    {"IRBIS_Ok", "NEC", 0x00000080, 0x000000AA},
+    // SMART Board
+    {"SMART_Power", "NEC", 0x00008BCA, 0x00000012},
+    {"SMART_Hide", "NEC", 0x00008BCA, 0x00000015},
+    {"SMART_Menu", "NEC", 0x00008BCA, 0x0000001B},
+    // ViewSonic
+    {"ViewSonic_Power", "NEC", 0x000083F4, 0x000017E8},
+    {"ViewSonic_Blank", "NEC", 0x000083F4, 0x000007F8},
+    {"ViewSonic_Freeze", "NEC", 0x000083F4, 0x000003FC},
+    {"ViewSonic_Menu", "NEC", 0x000083F4, 0x000030CF},
+    // Newline
+    {"Newline_Freeze", "NEC", 0x000083F4, 0x0000619E},
+    {"Newline_Blank", "NEC", 0x000083F4, 0x0000629D},
+    // LG
+    {"LG_Power", "NEC", 0x000004FB, 0x000008F7},
 };
 
 bool universal_ir_get_signal(size_t index, infrared_signal_t *signal);
